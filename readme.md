@@ -1,6 +1,7 @@
 # Dashboard DPT — Controle de Chamados
 
-Projeto real desenvolvido para a área de Processamento de Texto (DPT) da PwC. O dashboard foi criado para facilitar o controle e acompanhamento dos chamados, trazendo uma visão clara e ágil do status operacional, filtragem por etapas e navegação intuitiva.  
+Projeto real desenvolvido para a área de Processamento de Texto (DPT) da PwC. O dashboard foi criado para facilitar o controle e acompanhamento dos chamados, trazendo uma visão clara e ágil do status operacional, filtragem por etapas e navegação intuitiva. 
+No projeto real, executado dentro do xECM, uma query SQL é executada para buscar dados em tempo real. Ou seja, é possível integrar com APIs, banco de dados, ou qualquer outra fonte que desejar!
 **Todos os dados sensíveis e identidades do cliente foram ocultados nesta publicação.**
 
 ---
