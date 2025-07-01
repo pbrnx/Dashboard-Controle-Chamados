@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dashboard DPT</title>
+    <link rel="icon" href="assets/logo-ficticio.png">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script type="text/javascript" src="assets/script.js"></script>
+    <meta id="bbafmabaelnnkondpfpjmdklbmfnbmol">
+</head>
+<body>
+<header>
+    <img title="Clique para voltar à Smart View" src="assets/logo-ficticio.png">
+    <div style="display: flex; gap: 10px;">
+        <a class="button" href="#1">Dashboard DPT</a>
+        <a class="button" href="#2">Dashboard CI via DPT</a>
+        <a class="button" href="#3">Dashboard CI</a>
+        <a class="button" href="#4" target="_blank">Pasta DPT</a>
+        <a class="button" href="#5" target="_blank">Pasta CI</a>
+    </div>
+</header>
+
+<br><br>
+<div style="display: flex; align-items: center; gap: 20px; padding: 10px 30px 0 30px;">
+    <b style="font-size: 16px;">
+        Número de solicitações em aberto: &nbsp;
+        13
+    </b>
+    <b style="font-size: 16px;">
+        Número de solicitações do dia: &nbsp;
+        22
+    </b>
+    <button onclick="location.reload()" style="
+        background-color: #4CAF50;
+        color: #333;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        transition: background-color 0.2s ease-in-out;
+    " onmouseover="this.style.backgroundColor='#2196F3'" onmouseout="this.style.backgroundColor='#4CAF50'">
+        🔄 Atualizar dados
+    </button>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; padding-left: 20px;">
+    <label for="searchInput">Pesquisa por texto:</label>
+    <input type="text" id="searchInput" placeholder="Buscar itens da tabela">
+    <label for="stepFilter">Filtrar por Step:</label>
+    <select id="stepFilter">
+        <option value="all">Todos</option>
+        <option value="2ª Etapa - DPT Tráfego">2ª Etapa - DPT Tráfego</option>
+        <option value="3ª Etapa - DPT Operadores/Revisores">3ª Etapa - DPT Operadores/Revisores</option>
+        <option value="2ª Etapa - DPT Tráfego - Retorno da(s) Dúvida(s)">2ª Etapa - DPT Tráfego - Retorno da(s) Dúvida(s)</option>
+        <option value="3ª Etapa - DPT Operadores/Revisores - Retorno da(s) Dúvida(s)">3ª Etapa - DPT Operadores/Revisores - Retorno da(s) Dúvida(s)</option>
+    </select>
+</div>
+
+<table>
+    <tr>
+        <td style="width: 150px;"><h2>Legenda:</h2></td>
+        <td><div class="filter-legend" data-filter="novo" style="line-height:0; width:0; height:0; border: 10px solid green; float: left; cursor:pointer;"></div></td><td style="width: 100px;">&nbsp;Novo <br></td>
+        <td><div class="filter-legend" data-filter="foraDoPrazo" style="line-height:0; width:0; height:0; border: 10px solid red; float: left; cursor:pointer;"></div></td><td style="width: 100px;">&nbsp;Atrasado <br></td>
+        <td><div class="filter-legend" data-filter="duvida" style="line-height:0; width:0; height:0; border: 10px solid blue; float: left; cursor:pointer;"></div></td><td style="width: 160px;">&nbsp;Retorno da dúvida <br></td>
+        <td><div class="filter-legend" data-filter="assumido" style="line-height:0; width:0; height:0; border: 10px solid black; float: left; cursor:pointer;"></div></td><td style="width: 100px;">&nbsp;Assumido <br></td>
+        <td><div class="filter-legend" data-filter="naoTratado" style="line-height:0; width:0; height:0; border: 10px solid hotpink; float: left; cursor:pointer;"></div></td><td style="width: 290px;">&nbsp;Transferido para Operador/Revisor <br></td>
+    </tr>
+</table>
+
+<table class="data-table">
+    <tr class="table-header">
+        <td class="header-cell">Chamado</td>
+        <td class="header-cell sortable" id="sequenceHeader" title="Clique para ordenar!">Prazo</td>
+        <td class="header-cell">Grau de Prioridade</td>
+        <td class="header-cell sortable" id="sequenceHeader" title="Clique para ordenar!">Sequência</td>
+        <td class="header-cell">Nome do Solicitante</td>
+        <td class="header-cell">Responsável</td>
+        <td class="header-cell">Tarefa Atribuída a</td>
+        <td class="header-cell">Escritório</td>
+        <td class="header-cell sortable" id="dateHeader" title:'clique="" para="" ordenar!'="">Data de abertura</td>
+        <td class="header-cell">Acessar Step</td>
+        <td class="header-cell">Acessar Detalhamento</td>
+    </tr>
+    
+    <tr class="data-row novo slide-down">
+        <td class="data-cell">20398029</td>
+        <td class="data-cell">01/07/2025 00:00</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Alex Lee</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">XZ - Central City</td>
+        <td class="data-cell">30/06/2025 23:37</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                2ª Etapa - DPT Tráfego
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20398029 - 01/07/2025 - DPT - alexlee01
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row novo slide-down">
+        <td class="data-cell">20399622</td>
+        <td class="data-cell">01/07/2025 23:59</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Alex Lee</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">XZ - Central City</td>
+        <td class="data-cell">30/06/2025 23:32</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                2ª Etapa - DPT Tráfego
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20399622 - 01/07/2025 - DPT - alexlee01
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row novo slide-down">
+        <td class="data-cell">20398107</td>
+        <td class="data-cell">?</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Jane Smith</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">AB - New Town</td>
+        <td class="data-cell">30/06/2025 23:28</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                2ª Etapa - DPT Tráfego
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20398107 - 01/07/2025 - DPT - janesmith02
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row novo slide-down">
+        <td class="data-cell">20399553</td>
+        <td class="data-cell">?</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">John Doe</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">CD - Metro City</td>
+        <td class="data-cell">30/06/2025 20:46</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                2ª Etapa - DPT Tráfego
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20399553 - 30/06/2025 - DPT - johndoe01
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row novo slide-down">
+        <td class="data-cell">20397630</td>
+        <td class="data-cell">?</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Maria Silva</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">EF - South Ville</td>
+        <td class="data-cell">30/06/2025 20:06</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                2ª Etapa - DPT Tráfego
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20397630 - 30/06/2025 - DPT - mariasilva09
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row novo slide-down">
+        <td class="data-cell">20398382</td>
+        <td class="data-cell">?</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Chris Brown</td>
+        <td class="data-cell"></td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">AB - New Town</td>
+        <td class="data-cell">30/06/2025 20:04</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                2ª Etapa - DPT Tráfego
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20398382 - 30/06/2025 - DPT - chrisbrown03
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row assumido slide-down">
+        <td class="data-cell">20397200</td>
+        <td class="data-cell">04/07/2025 20:00</td>
+        <td class="data-cell">Média</td>
+        <td class="data-cell">2</td>
+        <td class="data-cell">Taylor Evans</td>
+        <td class="data-cell">Taylor Evans</td>
+        <td class="data-cell">tevans04</td>
+        <td class="data-cell">YZ - North Point</td>
+        <td class="data-cell">30/06/2025 19:13</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                3ª Etapa - DPT Operadores/Revisores
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20397200 - 30/06/2025 - DPT - tevans04
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row naoTratado slide-down">
+        <td class="data-cell">20397795</td>
+        <td class="data-cell">01/07/2025 10:30</td>
+        <td class="data-cell">Alta</td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Sam Kim</td>
+        <td class="data-cell">Morgan Lee</td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">AB - New Town</td>
+        <td class="data-cell">30/06/2025 18:47</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                3ª Etapa - DPT Operadores/Revisores
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20397795 - 30/06/2025 - DPT - samkim11
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row naoTratado slide-down">
+        <td class="data-cell">20396792</td>
+        <td class="data-cell">01/07/2025 09:30</td>
+        <td class="data-cell">Alta</td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Casey Miller</td>
+        <td class="data-cell">Morgan Lee</td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">GH - River Park</td>
+        <td class="data-cell">30/06/2025 17:40</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                3ª Etapa - DPT Operadores/Revisores
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20396792 - 30/06/2025 - DPT - caseymiller14
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row naoTratado slide-down">
+        <td class="data-cell">20395465</td>
+        <td class="data-cell">01/07/2025 10:00</td>
+        <td class="data-cell">Alta</td>
+        <td class="data-cell">?</td>
+        <td class="data-cell">Alex Morgan</td>
+        <td class="data-cell">Morgan Lee</td>
+        <td class="data-cell">DPT</td>
+        <td class="data-cell">AB - New Town</td>
+        <td class="data-cell">30/06/2025 16:37</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                3ª Etapa - DPT Operadores/Revisores
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                20395465 - 30/06/2025 - DPT - alexmorgan08
+            </a>
+        </td>
+    </tr>
+    <tr class="data-row assumido slide-down">
+        <td class="data-cell">19778698</td>
+        <td class="data-cell">04/07/2025 18:00</td>
+        <td class="data-cell">Média</td>
+        <td class="data-cell">3</td>
+        <td class="data-cell">Jamie Parker</td>
+        <td class="data-cell">Riley Harper</td>
+        <td class="data-cell">rharper09</td>
+        <td class="data-cell">YZ - North Point</td>
+        <td class="data-cell">24/06/2025 12:01</td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                3ª Etapa - DPT Operadores/Revisores
+            </a>
+        </td>
+        <td class="data-cell">
+            <a href="#" target="_blank">
+                19778698 - 24/06/2025 - DPT - jamieparker07
+            </a>
+        </td>
+    </tr>
+
+    <tr class="data-row duvida slide-down">
+    <td class="data-cell">20400123</td>
+    <td class="data-cell">02/07/2025 15:00</td>
+    <td class="data-cell">Baixa</td>
+    <td class="data-cell">?</td>
+    <td class="data-cell">Jordan Green</td>
+    <td class="data-cell">Morgan Lee</td>
+    <td class="data-cell">DPT</td>
+    <td class="data-cell">CD - Metro City</td>
+    <td class="data-cell">01/07/2025 14:20</td>
+    <td class="data-cell">
+        <a href="#" target="_blank">
+            2ª Etapa - DPT Tráfego - Retorno da(s) Dúvida(s)
+        </a>
+    </td>
+    <td class="data-cell">
+        <a href="#" target="_blank">
+            20400123 - 01/07/2025 - DPT - jordangreen12
+        </a>
+    </td>
+</tr>
+<tr class="data-row duvida slide-down">
+    <td class="data-cell">20400124</td>
+    <td class="data-cell">02/07/2025 16:30</td>
+    <td class="data-cell">Média</td>
+    <td class="data-cell">?</td>
+    <td class="data-cell">Avery Carter</td>
+    <td class="data-cell">Riley Harper</td>
+    <td class="data-cell">DPT</td>
+    <td class="data-cell">YZ - North Point</td>
+    <td class="data-cell">01/07/2025 15:45</td>
+    <td class="data-cell">
+        <a href="#" target="_blank">
+            3ª Etapa - DPT Operadores/Revisores - Retorno da(s) Dúvida(s)
+        </a>
+    </td>
+    <td class="data-cell">
+        <a href="#" target="_blank">
+            20400124 - 01/07/2025 - DPT - averycarter08
+        </a>
+    </td>
+</tr>
+
+</table>
+
+</body>
+</html>
