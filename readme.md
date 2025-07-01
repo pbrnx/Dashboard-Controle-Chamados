@@ -70,7 +70,8 @@ A aplicação dessas cores ocorre via função `applyColorLogic()` em [script.js
 
 ## 🖥️ Demonstração
 
-![Demonstração do Dashboard](assets/exemplo.png)  
+![image](https://github.com/user-attachments/assets/3fe70199-cfc4-47fa-9df1-e3d43688cca3)
+
 *(Imagem ilustrativa, dados fictícios)*
 
 ---
@@ -123,9 +124,9 @@ A aplicação dessas cores ocorre via função `applyColorLogic()` em [script.js
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Pedro Barone (2024), como solução customizada para a área de Processamento de Texto da PwC.  
+Desenvolvido por Pedro Barone (2025), como solução customizada para a área de Processamento de Texto da PwC.  
 Contato para dúvidas, suporte ou customizações:  
-[LinkedIn](https://www.linkedin.com/in/pedro-barone/) | [GitHub](https://github.com/pedrobarone)
+[LinkedIn](https://www.linkedin.com/in/pedro-barone/) | [GitHub](https://github.com/pbrnx)
 
 ---
 
